@@ -1,0 +1,29 @@
+<div class="container">
+
+
+        <section class="notifications">
+            <p class="notification-message">Message...</p>
+        </section>
+
+        <main>
+            <form class="text-center border border-light p-5" action="/login" method="POST">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" class="form-control" placeholder="Username" name="username" value="{{username}}">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" placeholder="Password" name="password" value="{{pass}}">
+                </div>
+            
+                <button type="submit" class="btn btn-primary">Login</button>
+            </form>
+        </main>
+
+        <footer class="page-footer font-small">
+            <div class="footer-copyright text-center py-3">© 2019
+                <a href="#/">Express Fundamentals</a>
+            </div>
+        </footer>
+
+    </div>

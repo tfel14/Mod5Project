@@ -1,0 +1,41 @@
+    <div class="container">
+
+
+        <section class="notifications">
+            <p class="notification-message">Message...</p>
+        </section>
+
+        <main>
+            <div class="container">
+                <h1 class="my-4">Course title : {{name}}
+                </h1>
+
+                <div class="row">
+
+                    <div class="col-md-8">
+                        <img class="img-fluid"
+                            src="{{imgURL}}"
+                            alt="Express" />
+                    </div>
+
+                    <div class="col-md-4 text-center">
+                        <h3 class="my-3">Course Description</h3>
+                        <p>{{Description}}</p>
+
+                        <a class="btn btn-danger" href="/delete">Delete</a>
+                        <a class="btn btn-warning" href="/edit">Edit</a>
+                        <span class="enrolled-span">You are already enrolled</span>
+                        <a class="btn btn-primary" href="/enroll">Enroll</a>
+
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="page-footer font-small">
+            <div class="footer-copyright text-center py-3">© 2019
+                <a href="#/">Express Fundamentals</a>
+            </div>
+        </footer>
+
+    </div>
