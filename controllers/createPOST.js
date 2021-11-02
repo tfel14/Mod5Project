@@ -38,7 +38,7 @@ module.exports = function(req, res) {
             name: fields.name,
             description: fields.description,
             imgURL: fields.imgURL,
-            creator: res.user.id
+            creator: res.user
         })
         .save()
         .then((course) => {

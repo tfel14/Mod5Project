@@ -3,10 +3,10 @@ const User = require('./User');
 
 
 const courseSchema = new mongoose.Schema({
-    name: { type: String, required: true },
-    description: { type: String, required: true },
-    imgURL: { type: String, required: true },
-    creator: { type: mongoose.Schema.Types.ObjectId, ref: "User", required: true }
+    name: { type: String },
+    description: { type: String },
+    imgURL: { type: String },
+    creator: { type: mongoose.Schema.Types.ObjectId, ref: "User" }
 });
 
 module.exports = mongoose.model("Course", courseSchema);

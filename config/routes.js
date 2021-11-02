@@ -41,7 +41,7 @@ module.exports = (app) => {
 
     app.get("/", userGET);
     app.get("/user", userGET);
-    app.get("/create", function(req, res) {
+    app.get("/create/course", function(req, res) {
         if (res.user) {
             let context = {};
             context.type = "none";
@@ -55,7 +55,7 @@ module.exports = (app) => {
             res.redirect("create-course");
         }
     });
-    app.post("/create", createPOST);
+    app.post("/create/course", createPOST);
     // app.get("/edit", function(req, res) {
 
     //     res.render("edit-course");
