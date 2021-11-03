@@ -4,7 +4,6 @@ const { validationResult } = require('express-validator');
 module.exports = function(req, res) {
     console.log("Getting all COURSES!!");
     let user = res.user;
-    //console.log(user);
     let context = {};
 
     if (user) {

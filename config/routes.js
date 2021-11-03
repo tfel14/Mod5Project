@@ -19,7 +19,6 @@ module.exports = (app) => {
     app.use((req, res, next) => {
         if (req.cookies.user) {
             let decodedJWT = jwt.verify(req.cookies.user, jwtConfig.secret);
-            //console.log(decodedJWT)
             res.user = {
                 id: decodedJWT.id,
                 username: decodedJWT.username,
@@ -35,7 +34,6 @@ module.exports = (app) => {
         if (res.show == undefined) {
             res.show = "none";
         }
-        //the home, about, register, login pages
         next();
     });
 
@@ -56,10 +54,6 @@ module.exports = (app) => {
         }
     });
     app.post("/create/course", createPOST);
-    // app.get("/edit", function(req, res) {
-
-    //     res.render("edit-course");
-    // });
     app.get("/edit/course/:id", edit.get);
     app.post("/edit/course/:id", edit.post);
 
@@ -67,9 +61,6 @@ module.exports = (app) => {
     app.post("/delete/course/:id", deleteCourse.post);
     app.get("/register", function(req, res) {
         let user = res.user;
-        //console.log(user);
-        //todo
-        //check if logged in or not. if logged in then redirect back to home
         let context = {};
         context.type = res.show;
         if (res.show != "none") {
@@ -89,9 +80,6 @@ module.exports = (app) => {
 
     app.get("/login", function(req, res) {
         let user = res.user;
-        //console.log(user);
-        //todo
-        //check if logged in or not. if logged in then redirect back to home
         let context = {};
         context.type = res.show;
         if (res.show != "none") {
@@ -119,7 +107,6 @@ module.exports = (app) => {
     });
     app.get("/details/:id", detailsGET);
     app.get("*", function(req, res) {
-        //404 page
         let context = {};
         res.show = "none";
         if (res.user) {

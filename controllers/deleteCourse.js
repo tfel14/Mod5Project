@@ -37,8 +37,6 @@ module.exports = {
         let id;
         id = req.params.id;
 
-        //console.log(id);
-        //get the data from the db
         Course.findByIdAndRemove(id)
 
         .then((course) => {

@@ -48,8 +48,6 @@ module.exports = {
         id = req.params.id;
         let updates = req.body;
         console.log(updates);
-        //console.log(id);
-        //get the data from the db
         updates.name = updates.name.trim();
         updates.description = updates.description.trim();
         updates.imgURL = updates.imgURL.trim();
@@ -78,7 +76,6 @@ module.exports = {
         }
 
         Course.findById(id).then((course) => {
-            //console.log(cube);
 
             course.name = updates.name;
             course.description = updates.description;
